@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="https://structorizer.fisch.lu" version="3.32-11" preRepeat="until " postFor="to" preReturn="return" postForIn="in" preWhile="while " output="OUTPUT" input="INPUT" preFor="for" preExit="exit" preLeave="leave" ignoreCase="true" preThrow="throw" preForIn="foreach" stepFor="by" namespace="" author="alexb" created="2022-10-25" changedby="alexb" changed="2022-10-25" origin="Structorizer 3.32-11" text="&#34;Fitness-Club-Rechner&#34;" comment="&#34;&#34;" color="ffffff" type="program" style="nice">
+	<children>
+		<instruction text="&#34;uint16_t Familienmitglieder;&#34;,&#34;uint16_t Jahre;&#34;,&#34;uint16_t Rabatt;&#34;,&#34;float Gebühren = 40.0f;&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+		<instruction text="&#34;Eingabe Familienmitglieder&#34;,&#34;Eingabe Jahre der Mitgliedschaft&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+		<alternative text="&#34;(Familienmitglieder == 2)&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+			<qTrue>
+				<instruction text="&#34;Rabatt = 5&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qTrue>
+			<qFalse>
+				<alternative text="&#34;(Familienmitglieder == 3)&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+					<qTrue>
+						<instruction text="&#34;Rabatt = 15&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+					</qTrue>
+					<qFalse>
+						<alternative text="&#34;(Familienmitglieder &#62;= 4)&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+							<qTrue>
+								<instruction text="&#34;Rabatt = 20&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+							</qTrue>
+							<qFalse color="ffffff">
+							</qFalse>
+						</alternative>
+					</qFalse>
+				</alternative>
+			</qFalse>
+		</alternative>
+		<instruction text="&#34;Gebühren = Gebühren / 100 * (100 - Rabatt);&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+		<alternative text="&#34;(Jahre &#62;= 5)&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+			<qTrue>
+				<instruction text="&#34;Gebühren = Gebühren / 100 * 95;&#34;,&#34;Ausgabe Langzeitrabatt&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qTrue>
+			<qFalse color="ffffff">
+			</qFalse>
+		</alternative>
+		<instruction text="&#34;Ausgabe Rabatt&#34;,&#34;Ausgabe Mitgliedsbeitrag&#34;,&#34;Ausgabe Mitgliedsbeitrag für die ganze Famile&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+	</children>
+</root>
